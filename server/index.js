@@ -1,16 +1,14 @@
-require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
-const imageRoutes = require('./routes/imageRoutes');
-const recipeRoutes = require('./routes/recipeRoutes');
+const uploadRoutes = require('./uploadRoutes'); // adjust path if necessary
 
 const app = express();
 
 app.use(cors());
 app.use(express.json());
 
-app.use('/api', imageRoutes);
-app.use('/api', recipeRoutes);
+// Use the upload routes
+app.use('/api', uploadRoutes);
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5001;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
