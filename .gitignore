@@ -1,0 +1,26 @@
+secrets/
+
+# Dependency directories
+node_modules/
+
+# Environment variables
+.env
+
+# Build outputs
+/build
+/dist
+
+# Log files
+*.log
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# IDE-specific files
+.vscode/
+.idea/
+
+# Google Cloud credentials
+secrets/
+*.json
